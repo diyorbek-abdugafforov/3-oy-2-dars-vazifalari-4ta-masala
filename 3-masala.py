@@ -1,6 +1,5 @@
 balandlik=100 # o'zim uchun 1000 o'rniga 100 qilib oldim ustoz
 tortishish=0
-
 # Kemani muvaffaqqiyatli qo'ndirish uchun qo'llanma :
 # 1-marta: 0
 # 2-marta: 0
@@ -15,10 +14,16 @@ tortishish=0
 
 while balandlik>0:
     qarshilik = int(input("Qarshilik tezlgini kiriting: "))
-    tortishish+=10-qarshilik
-    balandlik-=tortishish
-    print(tortishish)
-    print(balandlik)
+    print("-------------------------------")
+    if 0<=qarshilik<=10:
+        tortishish+=10-qarshilik
+        balandlik-=tortishish
+        print(f"Tezligi: {tortishish}")
+        print("-------------------------------")
+        print(f"Qolgan balandlik: {balandlik}")
+        print("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-")
+    else:
+        print("Qarshilik tezligi 0 dan katta va 10 dan kichik bo'lishi kerak!!!")
 if(tortishish>5):
     print("Kema halokatga uchradi!!!")
 else:
